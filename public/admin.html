@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="PT-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="images/icone-azul.png" type="image/x-icon">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.2/font/bootstrap-icons.min.css">
+
+    <title>Administrador</title>
+</head>
+
+<body onload="exitPreloader()">
+    <div class="overlay-preloader"></div>
+    <div class="preloader">
+        <div class="preloader-logo">
+            <svg id="asas-rsup" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                width="100" height="80" viewBox="0 -50 1910.909 1732.49">
+                <defs>
+                    <linearGradient id="linear-gradient" x1="1.275" y1="-1.232" x2="0" y2="1"
+                        gradientUnits="objectBoundingBox">
+                        <stop offset="0" stop-color="#0077c8" />
+                        <stop offset="0.502" stop-color="#00a9e0" />
+                        <stop offset="1" stop-color="#5bc2e7" />
+                    </linearGradient>
+                </defs>
+                <g id="Group_7" data-name="Group 7" style="isolation: isolate">
+                    <path id="Path_1" data-name="Path 1"
+                        d="M451.163,1181.173A172.331,172.331,0,0,1,278.832,1353.5H139.447A139.416,139.416,0,0,0,.031,1492.92v139.57H172.362c154.08,0,278.985-124.907,278.985-278.986h-.185a172.331,172.331,0,0,1,172.33-172.331L730,1181.162c290.31,0,556.154-104.757,761.791-278.532L730,902.336c-154,0-278.837,124.84-278.837,278.837"
+                        stroke="url(#linear-gradient)" fill="none" stroke-width="40" />
+                    <path id="Path_2" data-name="Path 2"
+                        d="M451.174,727.432c-.869,96.2-76.847,174.9-173.05,174.9H139.447A139.416,139.416,0,0,0,.031,1041.753L0,1181.322H172.2c154.08,0,278.985-124.907,278.985-278.986l-.024.294A172.331,172.331,0,0,1,623.492,730.3l779.964-.107c181.685-.024,347.013-108.044,416.943-275.731q.63-1.508,1.254-3.018L730,451.168c-153.139,0-277.444,123.451-278.826,276.264"
+                        stroke="url(#linear-gradient)" fill="none" stroke-width="40" />
+                    <path id="Path_3" data-name="Path 3"
+                        d="M730,0C576.861,0,452.556,123.451,451.174,276.264c-.869,96.2-76.847,174.9-173.05,174.9H139.447A139.415,139.415,0,0,0,.031,590.584L0,730.154H172.2c154.08,0,278.985-124.907,278.985-278.986h-.024a172.331,172.331,0,0,1,172.33-172.331l1009.322,0c152.656,0,277.728-123.052,278.092-275.707q0-1.438,0-2.878Z"
+                        stroke="url(#linear-gradient)" fill="none" stroke-width="40" />
+                </g>
+            </svg>
+        </div>
+    </div>
+    <nav>
+        <div class="navigation">
+            <div class="main-navigation">
+                <img id="logo" src="images/RSup-01.svg">
+                <svg id="menu" xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor"
+                    class="bi bi-list" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd"
+                        d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5" />
+                </svg>
+                <div class="holerite">
+                    <a id="text-holerite-adm" href="holerite.html">
+                        <svg id="img-holerite" xmlns="http://www.w3.org/2000/svg" class="bi bi-cash-stack"
+                            viewBox="0 0 16 16" style="fill: #fff;">
+                            <path d="M1 3a1 1 0 0 1 1-1h12a1 1 0 0 1 1 1zm7 8a2 2 0 1 0 0-4 2 2 0 0 0 0 4" />
+                            <path
+                                d="M0 5a1 1 0 0 1 1-1h14a1 1 0 0 1 1 1v8a1 1 0 0 1-1 1H1a1 1 0 0 1-1-1zm3 0a2 2 0 0 1-2 2v4a2 2 0 0 1 2 2h10a2 2 0 0 1 2-2V7a2 2 0 0 1-2-2z" />
+                        </svg>
+                        &nbsp;HOLERITE
+                    </a>
+                </div>
+                <div class="logout">
+                    <a id="text-logout" onclick="logout()">
+                        <svg id="img-logout" xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                            fill="currentColor" class="bi bi-box-arrow-right" viewBox="0 0 16 16">
+                            <path fill-rule="evenodd"
+                                d="M10 12.5a.5.5 0 0 1-.5.5h-8a.5.5 0 0 1-.5-.5v-9a.5.5 0 0 1 .5-.5h8a.5.5 0 0 1 .5.5v2a.5.5 0 0 0 1 0v-2A1.5 1.5 0 0 0 9.5 2h-8A1.5 1.5 0 0 0 0 3.5v9A1.5 1.5 0 0 0 1.5 14h8a1.5 1.5 0 0 0 1.5-1.5v-2a.5.5 0 0 0-1 0z" />
+                            <path fill-rule="evenodd"
+                                d="M15.854 8.354a.5.5 0 0 0 0-.708l-3-3a.5.5 0 0 0-.708.708L14.293 7.5H5.5a.5.5 0 0 0 0 1h8.793l-2.147 2.146a.5.5 0 0 0 .708.708z" />
+                        </svg>
+                        &nbsp;LOGOUT
+                    </a>
+                </div>
+            </div>
+
+            <!-- Sidebar -->
+
+            <div class="sidebar">
+                <div class="exit-btn">
+                    <svg id="img-exit-btn" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                        class="bi bi-x-lg" viewBox="0 0 16 16">
+                        <path
+                            d="M2.146 2.854a.5.5 0 1 1 .708-.708L8 7.293l5.146-5.147a.5.5 0 0 1 .708.708L8.707 8l5.147 5.146a.5.5 0 0 1-.708.708L8 8.707l-5.146 5.147a.5.5 0 0 1-.708-.708L7.293 8z" />
+                    </svg>
+                </div>
+                <img id="logo-sidebar" src="images/logo-rsup.png">
+                <div class="holerite-sidebar">
+                    <a id="text-holerite-sidebar" href="holerite.html">
+                        <svg id="img-holerite" xmlns="http://www.w3.org/2000/svg" class="bi bi-cash-stack"
+                            viewBox="0 0 16 16" style="fill: white;">
+                            <path d="M1 3a1 1 0 0 1 1-1h12a1 1 0 0 1 1 1zm7 8a2 2 0 1 0 0-4 2 2 0 0 0 0 4" />
+                            <path
+                                d="M0 5a1 1 0 0 1 1-1h14a1 1 0 0 1 1 1v8a1 1 0 0 1-1 1H1a1 1 0 0 1-1-1zm3 0a2 2 0 0 1-2 2v4a2 2 0 0 1 2 2h10a2 2 0 0 1 2-2V7a2 2 0 0 1-2-2z" />
+                        </svg>
+                        &nbsp;HOLERITE
+                    </a>
+                </div>
+                <div class="logout-sidebar">
+                    <a id="text-logout-sidebar" onclick="logout()">
+                        <svg id="img-logout-sidebar" xmlns="http://www.w3.org/2000/svg" fill="currentColor"
+                            class="bi bi-box-arrow-right" viewBox="0 0 16 16">
+                            <path fill-rule="evenodd"
+                                d="M10 12.5a.5.5 0 0 1-.5.5h-8a.5.5 0 0 1-.5-.5v-9a.5.5 0 0 1 .5-.5h8a.5.5 0 0 1 .5.5v2a.5.5 0 0 0 1 0v-2A1.5 1.5 0 0 0 9.5 2h-8A1.5 1.5 0 0 0 0 3.5v9A1.5 1.5 0 0 0 1.5 14h8a1.5 1.5 0 0 0 1.5-1.5v-2a.5.5 0 0 0-1 0z" />
+                            <path fill-rule="evenodd"
+                                d="M15.854 8.354a.5.5 0 0 0 0-.708l-3-3a.5.5 0 0 0-.708.708L14.293 7.5H5.5a.5.5 0 0 0 0 1h8.793l-2.147 2.146a.5.5 0 0 0 .708.708z" />
+                        </svg>
+                        &nbsp;LOGOUT
+                    </a>
+                </div>
+            </div>
+            <div class="overlay-menu"></div>
+        </div>
+    </nav>
+    <main>
+        <div class="main-container">
+            <div class="header-container">
+                <h1 class="title-holerite">Administrador</h1>
+            </div>
+            <br>
+            <div class="calendar-containers">
+                <div class="retangle1">
+                    <p id="Janeiro">JANEIRO</p>
+                    <label for="pdfUpload1">
+                        <img id="download-upload-image" src="images/upload.png">
+                        <img id="success-icon-1" src="images/feito.png">
+                    </label>
+                    <input type="file" id="pdfUpload1" style="display: none;"></input>
+
+                    <label for="pdfUpload13">
+                        <svg id="irrf-adm" class="irrf" xmlns="http://www.w3.org/2000/svg" class="bi bi-calculator-fill"
+                            viewBox="0 0 16 16">
+                            <path
+                                d="M2 2a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2zm2 .5v2a.5.5 0 0 0 .5.5h7a.5.5 0 0 0 .5-.5v-2a.5.5 0 0 0-.5-.5h-7a.5.5 0 0 0-.5.5m0 4v1a.5.5 0 0 0 .5.5h1a.5.5 0 0 0 .5-.5v-1a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5M4.5 9a.5.5 0 0 0-.5.5v1a.5.5 0 0 0 .5.5h1a.5.5 0 0 0 .5-.5v-1a.5.5 0 0 0-.5-.5zM4 12.5v1a.5.5 0 0 0 .5.5h1a.5.5 0 0 0 .5-.5v-1a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5M7.5 6a.5.5 0 0 0-.5.5v1a.5.5 0 0 0 .5.5h1a.5.5 0 0 0 .5-.5v-1a.5.5 0 0 0-.5-.5zM7 9.5v1a.5.5 0 0 0 .5.5h1a.5.5 0 0 0 .5-.5v-1a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5m.5 2.5a.5.5 0 0 0-.5.5v1a.5.5 0 0 0 .5.5h1a.5.5 0 0 0 .5-.5v-1a.5.5 0 0 0-.5-.5zM10 6.5v1a.5.5 0 0 0 .5.5h1a.5.5 0 0 0 .5-.5v-1a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5m.5 2.5a.5.5 0 0 0-.5.5v4a.5.5 0 0 0 .5.5h1a.5.5 0 0 0 .5-.5v-4a.5.5 0 0 0-.5-.5z" />
+                        </svg>
+                        <img id="success-icon-13" src="images/feito.png">
+                    </label>
+                    <input type="file" id="pdfUpload13" style="display: none;"></input>
+                </div>
+                <div class="retangle2">
+                    <p id="Fevereiro">FEVEREIRO</p>
+                    <label for="pdfUpload2">
+                        <img id="download-upload-image" src="images/upload.png">
+                        <img id="success-icon-2" src="images/feito.png">
+                    </label>
+                    <input type="file" id="pdfUpload2" style="display: none;"></input>
+                </div>
+                <div class="retangle3">
+                    <p id="Março">MARÇO</p>
+                    <label for="pdfUpload3">
+                        <img id="download-upload-image" src="images/upload.png">
+                        <img id="success-icon-3" src="images/feito.png">
+                    </label>
+                    <input type="file" id="pdfUpload3" style="display: none;"></input>
+                </div>
+                <div class="retangle4">
+                    <p id="Abril">ABRIL</p>
+                    <label for="pdfUpload4">
+                        <img id="download-upload-image" src="images/upload.png">
+                        <img id="success-icon-4" src="images/feito.png">
+                    </label>
+                    <input type="file" id="pdfUpload4" style="display: none;"></input>
+                </div>
+                <br>
+                <div class="retangle5">
+                    <p id="Maio">MAIO</p>
+                    <label for="pdfUpload5">
+                        <img id="download-upload-image" src="images/upload.png">
+                        <img id="success-icon-5" src="images/feito.png">
+                    </label>
+                    <input type="file" id="pdfUpload5" style="display: none;"></input>
+                </div>
+                <div class="retangle6">
+                    <p id="Junho">JUNHO</p>
+                    <label for="pdfUpload6">
+                        <img id="download-upload-image" src="images/upload.png">
+                        <img id="success-icon-6" src="images/feito.png">
+                    </label>
+                    <input type="file" id="pdfUpload6" style="display: none;"></input>
+                </div>
+                <div class="retangle7">
+                    <p id="Julho">JULHO</p>
+                    <label for="pdfUpload7">
+                        <img id="download-upload-image" src="images/upload.png">
+                        <img id="success-icon-7" src="images/feito.png">
+                    </label>
+                    <input type="file" id="pdfUpload7" style="display: none;"></input>
+                </div>
+                <div class="retangle8">
+                    <p id="Agosto">AGOSTO</p>
+                    <label for="pdfUpload8">
+                        <img id="download-upload-image" src="images/upload.png">
+                        <img id="success-icon-8" src="images/feito.png">
+                    </label>
+                    <input type="file" id="pdfUpload8" style="display: none;"></input>
+                </div>
+                <div class="retangle9">
+                    <p id="Setembro">SETEMBRO</p>
+                    <label for="pdfUpload9">
+                        <img id="download-upload-image" src="images/upload.png">
+                        <img id="success-icon-9" src="images/feito.png">
+                    </label>
+                    <input type="file" id="pdfUpload9" style="display: none;"></input>
+                </div>
+                <br>
+                <div class="retangle10">
+                    <p id="Outubro">OUTUBRO</p>
+                    <label for="pdfUpload10">
+                        <img id="download-upload-image" src="images/upload.png">
+                        <img id="success-icon-10" src="images/feito.png">
+                    </label>
+                    <input type="file" id="pdfUpload10" style="display: none;"></input>
+                </div>
+                <div class="retangle11">
+                    <p id="Novembro">NOVEMBRO</p>
+                    <label for="pdfUpload11">
+                        <img id="download-upload-image" src="images/upload.png">
+                        <img id="success-icon-11" src="images/feito.png">
+                    </label>
+                    <input type="file" id="pdfUpload11" style="display: none;"></input>
+
+                    <label for="pdfUpload14">
+                        <img id="icon-DecimoTerceiro1" class="DT1" src="images/13ro.png">
+                        <img id="success-icon-14" src="images/feito.png">
+                    </label>
+                    <input type="file" id="pdfUpload14" style="display: none;"></input>
+                </div>
+                <div class="retangle12">
+                    <p id="Dezembro">DEZEMBRO</p>
+                    <label for="pdfUpload12">
+                        <img id="download-upload-image" src="images/upload.png">
+                        <img id="success-icon-12" src="images/feito.png">
+                    </label>
+                    <input type="file" id="pdfUpload12" style="display: none;"></input>
+
+                    <label for="pdfUpload15">
+                        <img id="icon-DecimoTerceiro3" class="DT2" src="images/13ro.png">
+                        <img id="success-icon-15" src="images/feito.png">
+                    </label>
+                    <input type="file" id="pdfUpload15" style="display: none;"></input>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vivus/0.4.6/vivus.min.js"
+        integrity="sha512-oUUeA7VTcWBqUJD/VYCBB4VeIE0g1pg5aRMiSUOMGnNNeCLRS39OlkcyyeJ0hYx2h3zxmIWhyKiUXKkfZ5Wryg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.7.0/firebase-app-compat.js" defer></script>
+    <script src="https://www.gstatic.com/firebasejs/10.7.0/firebase-firestore-compat.js" defer></script>
+    <script src="https://www.gstatic.com/firebasejs/10.7.0/firebase-auth-compat.js" defer></script>
+    <script src="https://www.gstatic.com/firebasejs/10.7.0/firebase-storage-compat.js" defer></script>
+    <script src="js/admin.js" defer></script>
+</body>
+
+</html>

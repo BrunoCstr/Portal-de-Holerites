@@ -1,0 +1,72 @@
+// Botões
+
+@mixin std-btn {
+    background-color: $orange;
+    border: 1px none $orange;
+    border-radius: 6px;
+    color: white;
+    padding: 12px 28px;
+    font-size: 15px;
+    transition-duration: 0.4s;
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 10px 0 rgba(0, 0, 0, 0.19);
+    font-family: Prometo, sans-serif;
+    cursor: pointer;
+    text-align: center;
+}
+
+// Hover dos botões
+
+@mixin hover-btn {
+    background-color: rgb(249, 144, 58);
+    box-shadow: 3px 3px 0px 0px #ff1e00;
+    transform: translateY(2px);
+}
+
+// Ícones de navegação do portal
+
+@mixin nav-icons {
+    width: 27px;
+    height: 27px;
+    flex-shrink: 0;
+    cursor: pointer;
+    vertical-align: middle;
+    margin-right: 5px;
+}
+
+// Texto dos ícones de navegação
+
+@mixin text-icons {
+    position: absolute;
+    font-family: Prometo;
+    font-size: 14px;
+    vertical-align: middle;
+    cursor: pointer;
+}
+
+// Imagem de fica de background dos ícones de navegação
+
+@mixin background-icons {
+    left: -40px;
+    position: absolute;
+    z-index: -1;
+    filter: drop-shadow(0px 4px 48px rgba(0, 0, 0, 0.02));
+}
+
+// Retângulo do container principal do portal
+
+@mixin retangle {
+    width: 228px;
+    height: 171px;
+    flex-shrink: 0;
+    border-radius: 24px;
+    background: #FFF;
+    box-shadow: 0px 4px 7px 0px rgba(125, 125, 125, 0.25) inset;
+    float: left;
+    margin: 10px;
+    margin-left: 12px;
+    margin-bottom: 0;
+}
+
+@mixin successIcon {
+    display: none;
+}

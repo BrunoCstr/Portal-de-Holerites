@@ -1,0 +1,142 @@
+* {
+    font-family: Prometo;
+    margin: 0;
+    padding: 0;
+}
+
+html,
+body {
+    min-height: 100vh;
+    margin: 0;
+    display: flex;
+}
+
+body {
+    background-image: url(/images/background-image.png);
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    min-height: 100vh;
+}
+
+
+.container-login {
+    color: $gray-white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 500px;
+    height: 500px;
+    border-radius: 10px;
+    border: solid 1px;
+    border-color: #9b9b9b;
+
+    backdrop-filter: blur(25px);
+}
+
+#msgSuccess {
+    text-align: center;
+    color: #00bb00;
+}
+
+#msgError {
+    text-align: center;
+    color: #ff0000;
+}
+
+.form {
+    position: relative;
+    padding: 15px 0 0;
+    margin-top: 15px;
+    width: 70%;
+}
+
+#inputEmail,
+#inputPassword {
+    width: 100%;
+    border: 0;
+    border-bottom: 2px solid #9b9b9b;
+    outline: none;
+    font-size: 1.3rem;
+    color: #fff;
+    padding: 7px 0;
+    background: transparent !important;
+    font-size: 15px;
+}
+
+#eyePassword {
+    position: absolute;
+    top: 90%;
+    right: 5%;
+    transform: translateY(-50%);
+    cursor: pointer;
+}
+
+.index-button {
+    @include std-btn;
+}
+
+.index-button:hover {
+    @include hover-btn;
+}
+
+a {
+    font-size: 14px;
+    text-decoration: none;
+    color: $orange;
+}
+
+p {
+    font-size: 14px;
+}
+
+.creditos {
+    color: #fff;
+    text-align: left;
+}
+
+
+// Responsividade
+
+@media screen and (max-width: 428px) {
+    .container-login {
+        width: 400px;
+        height: 500px;
+    }
+}
+
+@media screen and (max-width: 390px) {
+    .container-login {
+        width: 360px;
+        height: 500px;
+    }
+}
+
+@media screen and (max-width: 360px) {
+    .container-login {
+        width: 340px;
+        height: 500px;
+    }
+}
+
+@media screen and (max-width: 320px) {
+    .container-login {
+        width: 300px;
+        height: 430px;
+    }
+
+    a,
+    p {
+        font-size: 12px;
+    }
+
+    h1 {
+        font-size: 27px;
+    }
+}
