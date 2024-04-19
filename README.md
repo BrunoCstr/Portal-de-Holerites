@@ -12,4 +12,3 @@ HTML: Responsável pela estruturação e organização do conteúdo das páginas
 SASS e CSS: Utilizados para estilização e design responsivo da interface do usuário.
 Vivus: Biblioteca JavaScript para animação de SVG, empregada na criação do preloader animado.
 Firebase: Utilizado para o banco de dados e autenticação de usuários.
-Node.js: Utilizado para o deploy e compilação do SASS.
